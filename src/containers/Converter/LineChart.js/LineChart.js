@@ -14,12 +14,9 @@ class LineChart extends Component {
  api(){
     
     axios.get("https://api.coindesk.com/v1/bpi/historical/close.json?currency="+this.props.currency+"&start="+this.state.startDate+"&end="+this.state.endDate).then((response) => {
-        //console.log(response.data.bpi);
-        let a = { ...this.state.history };
-
-        a.bpi = { ...response.data.bpi };
-        // console.log(a);
-        this.setState({ history: a});
+        console.log(response.data.bpi);
+        
+        this.setState({ history: response.data});
       });
  }
   componentDidMount() {
