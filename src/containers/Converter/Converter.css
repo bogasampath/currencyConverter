@@ -1,0 +1,18 @@
+.container{
+    width:fit-content;
+    border: black 2px solid;
+    border-radius: 8px;
+    box-shadow: 10px 5px 10px rgba(226, 231, 231, 0.959);
+    align-content: center;
+    margin-top: 150px;
+    padding: 50px;
+    height: max-content;
+    
+}
+
+.Dropdown{
+    border : black solid 2px;
+    width: 14rem;
+    border-radius: 6px;
+    border-color:rgb(17, 43, 21);
+}
