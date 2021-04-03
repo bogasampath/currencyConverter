@@ -7,7 +7,7 @@ class LineChart extends Component{
     state ={
         history: {}
     }
-
+    
     componentDidMount(){
         axios.get('https://api.coindesk.com/v1/bpi/historical/close.json?currency=EUR&start=2013-08-01&end=2013-09-28')
             .then(response =>{
@@ -20,17 +20,16 @@ class LineChart extends Component{
         });
      }
     
-  
+    
     render(){
-        let d = this.state.history.bpi;
-        //{console.log(d['2013-08-02'])}
+        //  {console.log(this.state.history.bpi['2013-08-03'])}
     return <div>
         <Line
             height={200}
             width={400}
             
             data = {{
-                labels: this.state.history.bpi,        //[1,2,3,4,5,6,7,8],
+                labels: [1,2,3,4,5,6,7,8],
                 
                 datasets: [{
                     label: 'Last 60 days trend',

@@ -53,9 +53,10 @@ class Converter extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-5">
+            <div className='col-6 pb-2 text-left pl-0'>
             <span>1 Bitcoin Equals</span>
-
+            </div>
             <DropdownButton
               className="Dropdown"
               variant="white"
@@ -73,12 +74,16 @@ class Converter extends Component {
               </Dropdown.Item>
             </DropdownButton>
 
-            <span>
+            <div className='float-left p-3 font-weight-bold'>
+            <span className='col-6 align-center text-left'>
               {this.state.currencyData[this.state.selectedCurrency].rate}
+              </span>
+              <span className='col-6'>
               {this.state.country[this.state.selectedCurrency]}
             </span>
+            </div>
           </div>
-          <div className="col-6">
+          <div className="col-7">
             <LineChart />
           </div>
         </div>
