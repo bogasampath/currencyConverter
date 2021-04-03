@@ -27,9 +27,6 @@ class Converter extends Component {
   componentDidMount() {
     this.loadData();
   }
-  // componentDidUpdate(){
-  //     this.loadData();
-  // }
 
   loadData() {
     axios
@@ -45,7 +42,6 @@ class Converter extends Component {
   }
 
   currencySelectHandler = (country) => {
-    //console.log("selected :" + country);
     this.setState({ selectedCurrency: country });
   };
 
@@ -63,7 +59,7 @@ class Converter extends Component {
               id="dropdown-basic-button"
               title="USD- United States Dollar"
             >
-              <Dropdown.Item onSelect={() => this.currencySelectHandler("USD")}>
+              <Dropdown.Item onSelect={() => this.currencySelectHandler("USD") }>
                 USD- United States Dollar
               </Dropdown.Item>
               <Dropdown.Item onSelect={() => this.currencySelectHandler("GBP")}>
@@ -84,7 +80,7 @@ class Converter extends Component {
             </div>
           </div>
           <div className="col-7">
-            <LineChart />
+            <LineChart currency = {this.state.selectedCurrency}/>
           </div>
         </div>
       </div>
